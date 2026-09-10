@@ -9,10 +9,11 @@ import { Facility } from '@/components/facility'
 import { Contact } from '@/components/contact'
 import { SiteFooter } from '@/components/site-footer'
 import { StickyContact } from '@/components/sticky-contact'
+import { BookingProvider } from '@/components/booking-dialog'
 
 export default function Page() {
   return (
-    <>
+    <BookingProvider>
       {/* Subtle page-wide honeycomb wash behind all content */}
       <div
         aria-hidden="true"
@@ -31,6 +32,6 @@ export default function Page() {
       </main>
       <SiteFooter />
       <StickyContact />
-    </>
+    </BookingProvider>
   )
 }

@@ -1,7 +1,11 @@
+'use client'
+
 import { ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { useBooking } from '@/components/booking-dialog'
 
 export function Hero() {
+  const { open } = useBooking()
   return (
     <section id="top" className="relative min-h-svh w-full overflow-hidden">
       {/* Full-width photo background — neutral gray placeholder block */}
@@ -42,8 +46,7 @@ export function Hero() {
           </p>
           <div className="mt-10">
             <Button
-              nativeButton={false}
-              render={<a href="#contact" />}
+              onClick={open}
               size="lg"
               className="group h-14 rounded-xl px-8 font-heading text-sm font-semibold uppercase tracking-widest"
             >
