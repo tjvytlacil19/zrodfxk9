@@ -13,6 +13,11 @@ import { StickyContact } from '@/components/sticky-contact'
 export default function Page() {
   return (
     <>
+      {/* Subtle page-wide honeycomb wash behind all content */}
+      <div
+        aria-hidden="true"
+        className="honeycomb-page pointer-events-none fixed inset-0 -z-10"
+      />
       <SiteHeader />
       <main>
         <Hero />

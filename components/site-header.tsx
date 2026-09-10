@@ -35,7 +35,7 @@ export function SiteHeader() {
         <Button
           nativeButton={false}
           render={<a href="#contact" />}
-          className="rounded-none font-heading text-xs font-semibold uppercase tracking-widest"
+          className="rounded-lg font-heading text-xs font-semibold uppercase tracking-widest"
         >
           Apply Now
         </Button>

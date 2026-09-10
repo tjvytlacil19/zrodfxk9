@@ -45,7 +45,7 @@ export function Hero() {
               nativeButton={false}
               render={<a href="#contact" />}
               size="lg"
-              className="group h-14 rounded-none px-8 font-heading text-sm font-semibold uppercase tracking-widest"
+              className="group h-14 rounded-xl px-8 font-heading text-sm font-semibold uppercase tracking-widest"
             >
               Book an Evaluation
               <ArrowRight className="ml-1 size-4 transition-transform group-hover:translate-x-1" />

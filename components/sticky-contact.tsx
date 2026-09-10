@@ -18,7 +18,7 @@ export function StickyContact() {
     <a
       href="#contact"
       className={cn(
-        'group fixed bottom-6 right-6 z-50 flex items-center gap-2.5 rounded-none bg-primary px-5 py-4 font-heading text-xs font-semibold uppercase tracking-widest text-primary-foreground shadow-lg shadow-black/40 transition-all duration-300',
+        'group fixed bottom-6 right-6 z-50 flex items-center gap-2.5 rounded-full bg-primary px-6 py-4 font-heading text-xs font-semibold uppercase tracking-widest text-primary-foreground shadow-lg shadow-black/40 transition-all duration-300',
         visible
           ? 'translate-y-0 opacity-100'
           : 'pointer-events-none translate-y-4 opacity-0',

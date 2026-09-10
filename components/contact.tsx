@@ -12,7 +12,7 @@ const DETAILS = [
 ]
 
 const inputClass =
-  'w-full rounded-none border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none transition-colors focus:border-primary'
+  'w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none transition-colors focus:border-primary'
 
 export function Contact() {
   const [submitted, setSubmitted] = useState(false)
@@ -97,7 +97,7 @@ export function Contact() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="h-13 w-full rounded-none py-3 font-heading text-sm font-semibold uppercase tracking-widest"
+                  className="h-13 w-full rounded-xl py-3 font-heading text-sm font-semibold uppercase tracking-widest"
                 >
                   Submit Application
                 </Button>

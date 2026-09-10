@@ -51,7 +51,7 @@ export function AboutTrainer() {
             render={<a href="#trainer" />}
             variant="outline"
             size="lg"
-            className="group mt-10 rounded-none border-primary/50 font-heading text-xs font-semibold uppercase tracking-widest text-primary hover:bg-primary hover:text-primary-foreground"
+            className="group mt-10 rounded-xl border-primary/50 font-heading text-xs font-semibold uppercase tracking-widest text-primary hover:bg-primary hover:text-primary-foreground"
           >
             Read Full Bio
             <ArrowRight className="ml-1 size-4 transition-transform group-hover:translate-x-1" />
