@@ -178,13 +178,7 @@ function BookingDialog({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
                     className="flex items-center justify-center gap-2.5 rounded-xl bg-primary py-3.5 font-heading text-sm font-semibold uppercase tracking-widest text-primary-foreground transition-opacity hover:opacity-90"
                   >
                     <Phone className="size-4" />
-                    Call (719) 555-0199
-                  </a>
-                  <a
-                    href="sms:+17195550199"
-                    className="flex items-center justify-center gap-2.5 rounded-xl border border-primary/50 py-3.5 font-heading text-sm font-semibold uppercase tracking-widest text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
-                  >
-                    Call or Text
+                    Call or Text (719) 555-0199
                   </a>
                 </div>
               </div>
