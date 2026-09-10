@@ -61,6 +61,7 @@ export function Contact() {
               </div>
             ) : (
               <form
+                suppressHydrationWarning
                 className="flex flex-col gap-5"
                 onSubmit={(e) => {
                   e.preventDefault()
@@ -72,26 +73,26 @@ export function Contact() {
                     <label htmlFor="name" className="font-heading text-xs font-semibold uppercase tracking-widest text-muted-foreground">
                       Full Name
                     </label>
-                    <input id="name" name="name" type="text" required placeholder="Jane Doe" className={inputClass} />
+                    <input suppressHydrationWarning id="name" name="name" type="text" required placeholder="Jane Doe" className={inputClass} />
                   </div>
                   <div className="flex flex-col gap-2">
                     <label htmlFor="phone" className="font-heading text-xs font-semibold uppercase tracking-widest text-muted-foreground">
                       Phone
                     </label>
-                    <input id="phone" name="phone" type="tel" placeholder="(719) 555-0000" className={inputClass} />
+                    <input suppressHydrationWarning id="phone" name="phone" type="tel" placeholder="(719) 555-0000" className={inputClass} />
                   </div>
                 </div>
                 <div className="flex flex-col gap-2">
                   <label htmlFor="email" className="font-heading text-xs font-semibold uppercase tracking-widest text-muted-foreground">
                     Email
                   </label>
-                  <input id="email" name="email" type="email" required placeholder="you@email.com" className={inputClass} />
+                  <input suppressHydrationWarning id="email" name="email" type="email" required placeholder="you@email.com" className={inputClass} />
                 </div>
                 <div className="flex flex-col gap-2">
                   <label htmlFor="message" className="font-heading text-xs font-semibold uppercase tracking-widest text-muted-foreground">
                     Tell Us About Your Dog
                   </label>
-                  <textarea id="message" name="message" rows={4} placeholder="Breed, age, and the behavior you want to address…" className={inputClass} />
+                  <textarea suppressHydrationWarning id="message" name="message" rows={4} placeholder="Breed, age, and the behavior you want to address…" className={inputClass} />
                 </div>
                 <Button
                   type="submit"
