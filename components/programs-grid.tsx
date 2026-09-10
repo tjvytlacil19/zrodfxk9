@@ -4,28 +4,33 @@ import { ImagePlaceholder } from '@/components/image-placeholder'
 
 const PROGRAMS = [
   {
-    name: 'Board & Train',
-    description: 'Immersive on-ranch program building obedience from the ground up.',
+    name: 'Advanced Board & Train',
+    description:
+      'The ultimate immersive experience where your dog stays with us for 4-6 weeks of intensive training, learning obedience, structure, and real-world manners.',
   },
   {
-    name: 'Aggression Rehab',
-    description: 'Structured protocols for reactive, fearful, and aggressive dogs.',
+    name: 'Aggressive Dog Rehabilitation',
+    description:
+      'Specialized training for reactive, fearful, and aggressive dogs, addressing the root cause with proven behavior modification techniques.',
   },
   {
-    name: 'Off-Leash Reliability',
-    description: 'Dependable recall and control in high-distraction environments.',
+    name: 'Puppy Training & Socialization',
+    description:
+      'Start your pup off right with foundation training, house manners, socialization, and confidence-building exercises.',
   },
   {
-    name: 'Puppy Foundations',
-    description: 'Early development shaping confident, well-adjusted working dogs.',
+    name: 'Urban K9 Anxiety',
+    description:
+      'Trains dogs to stay calm in crowded environments, around loud noises, and in high-distraction settings, ensuring they thrive in urban life.',
   },
   {
-    name: 'Protection Basics',
-    description: 'Controlled foundations in personal protection and guardian work.',
+    name: 'Family Dog Mastery',
+    description: 'Reinforces structure and obedience to create the ultimate family-friendly dog.',
   },
   {
-    name: 'Handler Coaching',
-    description: 'Owner transfer sessions so results carry over into daily life.',
+    name: 'Rescue Dog Rehab',
+    description:
+      'A structured rehabilitation program focused on trust-building, confidence exercises, and socialization to help your dog feel secure in their new environment.',
   },
 ]
 
