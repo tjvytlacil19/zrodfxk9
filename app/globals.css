@@ -161,15 +161,15 @@
   }
   body {
     @apply bg-background text-foreground;
-    /* Inheritable honeycomb tile — reused by opaque bands via .honeycomb-surface */
-    --hex-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='208' viewBox='0 0 56 100'%3E%3Cg fill='none' stroke='%238CDA3F' stroke-opacity='0.12' stroke-width='1'%3E%3Cpath d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100'/%3E%3Cpath d='M28 0L28 34L0 50L0 84L28 100L56 84L56 50L28 34'/%3E%3C/g%3E%3C/svg%3E");
+    /* Inheritable honeycomb tile (true hexagons) — reused by opaque bands via .honeycomb-surface */
+    --hex-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill='%238CDA3F' fill-opacity='0.16'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v11.2l9.99 5.8 9.99-5.8V17.9l-9.99-5.8L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.31zm0 18.5L12.98 41v8h-2v-6.85L0 35.81V33.5zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/svg%3E");
     /* Honeycomb tile + faint depth gradients so the dark canvas isn't flat black */
     background-image:
       var(--hex-pattern),
       radial-gradient(60rem 40rem at 50% -10%, oklch(1 0 0 / 6%), transparent 70%),
       radial-gradient(55rem 55rem at 100% 15%, oklch(0.83 0.2 140 / 6%), transparent 65%),
       radial-gradient(50rem 50rem at 0% 85%, oklch(0.83 0.2 140 / 5%), transparent 60%);
-    background-size: 120px 208px, auto, auto, auto;
+    background-size: 56px 98px, auto, auto, auto;
     background-repeat: repeat, no-repeat, no-repeat, no-repeat;
     background-position: 0 0, center, center, center;
     background-attachment: fixed;
@@ -196,7 +196,7 @@
   .honeycomb-surface {
     background-color: var(--card);
     background-image: var(--hex-pattern);
-    background-size: 120px 208px;
+    background-size: 56px 98px;
     background-position: 0 0;
   }
 }

@@ -68,19 +68,11 @@ export function Contact() {
                   setSubmitted(true)
                 }}
               >
-                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-                  <div className="flex flex-col gap-2">
-                    <label htmlFor="name" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
-                      Full Name
-                    </label>
-                    <input suppressHydrationWarning id="name" name="name" type="text" required placeholder="Jane Doe" className={inputClass} />
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <label htmlFor="phone" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
-                      Phone
-                    </label>
-                    <input suppressHydrationWarning id="phone" name="phone" type="tel" placeholder="(719) 555-0000" className={inputClass} />
-                  </div>
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="name" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
+                    Your Name
+                  </label>
+                  <input suppressHydrationWarning id="name" name="name" type="text" required placeholder="Jane Doe" className={inputClass} />
                 </div>
                 <div className="flex flex-col gap-2">
                   <label htmlFor="email" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
@@ -89,10 +81,30 @@ export function Contact() {
                   <input suppressHydrationWarning id="email" name="email" type="email" required placeholder="you@email.com" className={inputClass} />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="message" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
-                    Tell Us About Your Dog
+                  <label htmlFor="dogName" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
+                    Dog&apos;s Name
                   </label>
-                  <textarea suppressHydrationWarning id="message" name="message" rows={4} placeholder="Breed, age, and the behavior you want to address…" className={inputClass} />
+                  <input suppressHydrationWarning id="dogName" name="dogName" type="text" required placeholder="Ranger" className={inputClass} />
+                </div>
+                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                  <div className="flex flex-col gap-2">
+                    <label htmlFor="breed" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
+                      Breed
+                    </label>
+                    <input suppressHydrationWarning id="breed" name="breed" type="text" required placeholder="German Shepherd" className={inputClass} />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <label htmlFor="age" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
+                      Age
+                    </label>
+                    <input suppressHydrationWarning id="age" name="age" type="text" required placeholder="2 yrs" className={inputClass} />
+                  </div>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="message" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
+                    About your dog
+                  </label>
+                  <textarea suppressHydrationWarning id="message" name="message" rows={4} placeholder="The behavior you want to address…" className={inputClass} />
                 </div>
                 <Button
                   type="submit"
