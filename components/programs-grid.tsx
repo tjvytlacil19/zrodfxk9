@@ -1,60 +1,37 @@
 import { ArrowUpRight } from 'lucide-react'
 import { SectionHeading } from '@/components/section-heading'
 import { ImagePlaceholder } from '@/components/image-placeholder'
+import { HexMark } from '@/components/hex-mark'
 
 const PROGRAMS = [
   {
     name: 'Advanced Board & Train',
     description:
       'The ultimate immersive experience where your dog stays with us for 4-6 weeks of intensive training, learning obedience, structure, and real-world manners.',
-    stats: [
-      { label: 'Duration', value: '4–6 Weeks' },
-      { label: 'Format', value: 'On-Ranch' },
-    ],
   },
   {
     name: 'Aggressive Dog Rehabilitation',
     description:
       'Specialized training for reactive, fearful, and aggressive dogs, addressing the root cause with proven behavior modification techniques.',
-    stats: [
-      { label: 'Focus', value: 'Behavior' },
-      { label: 'Success Rate', value: '94%' },
-    ],
   },
   {
     name: 'Puppy Training & Socialization',
     description:
       'Start your pup off right with foundation training, house manners, socialization, and confidence-building exercises.',
-    stats: [
-      { label: 'Age Range', value: '8–20 Wks' },
-      { label: 'Sessions', value: '12' },
-    ],
   },
   {
     name: 'Urban K9 Anxiety',
     description:
       'Trains dogs to stay calm in crowded environments, around loud noises, and in high-distraction settings, ensuring they thrive in urban life.',
-    stats: [
-      { label: 'Focus', value: 'Composure' },
-      { label: 'Setting', value: 'Urban' },
-    ],
   },
   {
     name: 'Family Dog Mastery',
     description: 'Reinforces structure and obedience to create the ultimate family-friendly dog.',
-    stats: [
-      { label: 'Level', value: 'Mastery' },
-      { label: 'Format', value: 'Family' },
-    ],
   },
   {
     name: 'Rescue Dog Rehab',
     description:
       'A structured rehabilitation program focused on trust-building, confidence exercises, and socialization to help your dog feel secure in their new environment.',
-    stats: [
-      { label: 'Focus', value: 'Trust' },
-      { label: 'Approach', value: 'Gradual' },
-    ],
   },
 ]
 
@@ -70,13 +47,16 @@ export function ProgramsGrid() {
               <div className="relative overflow-hidden">
                 <ImagePlaceholder
                   label={program.name}
-                  video
                   className="aspect-video w-full transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                 />
                 <span
                   aria-hidden="true"
                   className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-border transition-colors duration-300 group-hover:ring-primary/50"
                 />
+                {/* Hexagon badge */}
+                <span className="absolute left-5 top-5 flex size-11 items-center justify-center bg-background/80 backdrop-blur-sm hex-clip-flat">
+                  <HexMark className="size-6 text-primary" />
+                </span>
               </div>
 
               <div className="mt-7 flex items-start justify-between gap-6">
@@ -90,18 +70,13 @@ export function ProgramsGrid() {
                 {program.description}
               </p>
 
-              <dl className="mt-7 flex divide-x divide-border border-t border-border pt-5">
-                {program.stats.map((stat) => (
-                  <div key={stat.label} className="flex flex-col gap-1.5 pr-10 pl-6 first:pl-0">
-                    <dt className="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-muted-foreground">
-                      {stat.label}
-                    </dt>
-                    <dd className="font-heading text-xl font-bold uppercase tracking-wide text-primary">
-                      {stat.value}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
+              <span className="mt-6 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-primary">
+                View Program
+                <span
+                  aria-hidden="true"
+                  className="h-px w-8 bg-primary transition-all duration-300 group-hover:w-12"
+                />
+              </span>
             </a>
           ))}
         </div>

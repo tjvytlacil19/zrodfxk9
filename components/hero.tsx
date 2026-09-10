@@ -1,24 +1,15 @@
-import { ArrowRight, Play } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export function Hero() {
   return (
     <section id="top" className="relative min-h-svh w-full overflow-hidden">
-      {/* Full-bleed background video — dark placeholder block */}
+      {/* Full-width photo background — neutral gray placeholder block */}
       <div
-        aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-br from-neutral-800 via-neutral-900 to-black"
+        role="img"
+        aria-label="Working dog on the ranch photo placeholder"
+        className="absolute inset-0 bg-gradient-to-br from-neutral-700 via-neutral-800 to-neutral-900"
       />
-
-      {/* Centered play indicator suggesting an autoplaying showreel */}
-      <div aria-hidden="true" className="absolute inset-0 flex items-center justify-center">
-        <span className="relative flex size-28 items-center justify-center">
-          <span className="absolute inset-0 animate-ping rounded-full border border-primary/30" />
-          <span className="flex size-20 items-center justify-center rounded-full border border-primary/60 bg-black/40 backdrop-blur-sm">
-            <Play className="size-7 translate-x-0.5 text-primary" fill="currentColor" />
-          </span>
-        </span>
-      </div>
 
       {/* Darkening overlays for text legibility */}
       <div
@@ -29,8 +20,8 @@ export function Hero() {
       {/* Top metadata row */}
       <div className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-4 pt-28 sm:px-6 lg:px-8">
         <span className="flex items-center gap-2 font-mono text-xs tracking-[0.2em] text-primary">
-          <span className="size-1.5 animate-pulse rounded-full bg-primary" />
-          SHOWREEL — NOW PLAYING
+          <span className="size-1.5 rounded-full bg-primary" />
+          ZRODFX K9
         </span>
         <span className="hidden font-mono text-xs tracking-[0.2em] text-muted-foreground sm:block">
           [ COLORADO SPRINGS, CO ]
