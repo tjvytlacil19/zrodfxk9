@@ -46,7 +46,7 @@ export function ProgramsGrid() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading index="01" eyebrow="Selected Work" title="Programs" />
 
-        <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2 lg:mt-24 lg:gap-y-24">
+        <div className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:mt-20 lg:grid-cols-3">
           {PROGRAMS.map((program) => (
             <a key={program.name} href="#contact" className="group block">
               <div className="relative overflow-hidden">
@@ -64,18 +64,18 @@ export function ProgramsGrid() {
                 </span>
               </div>
 
-              <div className="mt-7 flex items-start justify-between gap-6">
-                <h3 className="font-heading text-2xl font-bold uppercase leading-none tracking-tight text-foreground sm:text-3xl lg:text-4xl">
+              <div className="mt-5 flex items-start justify-between gap-4">
+                <h3 className="font-heading text-xl font-bold uppercase leading-none tracking-tight text-foreground sm:text-2xl">
                   {program.name}
                 </h3>
-                <ArrowUpRight className="mt-1 size-7 shrink-0 text-muted-foreground transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-primary" />
+                <ArrowUpRight className="mt-0.5 size-5 shrink-0 text-muted-foreground transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-primary" />
               </div>
 
-              <p className="mt-4 max-w-xl text-pretty leading-relaxed text-muted-foreground">
+              <p className="mt-3 text-pretty text-sm leading-relaxed text-muted-foreground">
                 {program.description}
               </p>
 
-              <span className="mt-6 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-primary">
+              <span className="mt-4 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-primary">
                 View Program
                 <span
                   aria-hidden="true"
