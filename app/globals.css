@@ -161,11 +161,11 @@
   }
   body {
     @apply bg-background text-foreground;
-    /* Cinematic hexagon honeycomb texture as a fixed page backdrop */
-    background-image: url('/hex-bg.png');
-    background-size: cover;
+    /* Subtle line-art hexagon lattice with sparse node dots as a fixed backdrop */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='112' height='200' viewBox='0 0 56 100'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.5' stroke-width='0.5'%3E%3Cpath d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100'/%3E%3Cpath d='M28 0L28 34L0 50L0 84L28 100L56 84L56 50L28 34'/%3E%3C/g%3E%3Ccircle cx='0' cy='50' r='1.6' fill='%23ffffff' fill-opacity='0.6'/%3E%3Ccircle cx='28' cy='66' r='1.6' fill='%23ffffff' fill-opacity='0.6'/%3E%3C/svg%3E");
+    background-size: 168px 300px;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-attachment: fixed;
   }
 }
