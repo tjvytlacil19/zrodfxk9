@@ -67,7 +67,7 @@ export function StatsBand() {
   }, [])
 
   return (
-    <section ref={ref} className="border-y border-border honeycomb-surface">
+    <section ref={ref} className="border-y border-border bg-card">
       <div className="mx-auto grid max-w-7xl grid-cols-1 divide-y divide-border px-4 sm:grid-cols-2 sm:divide-x lg:grid-cols-4 lg:divide-y-0">
         {STATS.map((stat, i) => (
           <div
