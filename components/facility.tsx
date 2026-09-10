@@ -3,11 +3,11 @@ import { ImagePlaceholder } from '@/components/image-placeholder'
 
 export function Facility() {
   return (
-    <section id="facility" className="scroll-mt-16 border-b border-border py-20 lg:py-28">
+    <section id="facility" className="scroll-mt-16 py-32 lg:py-48">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20">
           <div className="flex flex-col justify-center">
-            <SectionHeading eyebrow="The Ranch" title="15 Acres of Working Ground" />
+            <SectionHeading index="04" eyebrow="The Ranch" title="The Ground" />
             <p className="mt-6 text-pretty leading-relaxed text-muted-foreground">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Our purpose-built

@@ -12,11 +12,10 @@ const CREDENTIALS = [
 
 export function AboutTrainer() {
   return (
-    <section id="trainer" className="scroll-mt-16 border-b border-border py-20 lg:py-28">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
+    <section id="trainer" className="scroll-mt-16 py-32 lg:py-48">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
         {/* Portrait — hexagon-masked gray placeholder */}
         <div className="relative mx-auto w-full max-w-md">
-          <div aria-hidden="true" className="honeycomb-bg absolute -inset-6 opacity-40" />
           <ImagePlaceholder
             label="TJ Vytlacil portrait"
             className="hex-clip relative aspect-square w-full"
@@ -24,7 +23,7 @@ export function AboutTrainer() {
         </div>
 
         <div>
-          <SectionHeading eyebrow="Meet the Trainer" title="TJ Vytlacil" />
+          <SectionHeading index="02" eyebrow="Meet the Trainer" title="The Trainer" />
           <p className="mt-6 text-pretty leading-relaxed text-muted-foreground">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

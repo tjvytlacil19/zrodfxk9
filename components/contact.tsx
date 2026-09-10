@@ -18,11 +18,11 @@ export function Contact() {
   const [submitted, setSubmitted] = useState(false)
 
   return (
-    <section id="contact" className="scroll-mt-16 py-20 lg:py-28">
+    <section id="contact" className="scroll-mt-16 py-32 lg:py-48">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20">
           <div>
-            <SectionHeading eyebrow="Get Started" title="Apply For Training" />
+            <SectionHeading index="05" eyebrow="Get Started" title="Apply" />
             <p className="mt-6 max-w-md text-pretty leading-relaxed text-muted-foreground">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tell us about your
               dog and goals. We review every application personally.

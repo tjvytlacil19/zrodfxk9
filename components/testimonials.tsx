@@ -24,11 +24,11 @@ const QUOTES = [
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="scroll-mt-16 border-b border-border bg-card py-20 lg:py-28">
+    <section id="testimonials" className="scroll-mt-16 bg-card py-32 lg:py-48">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading eyebrow="Client Results" title="What Owners Say" />
+        <SectionHeading index="03" eyebrow="Client Results" title="Proof" />
 
-        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3 lg:mt-24">
           {QUOTES.map((item, i) => (
             <figure
               key={i}
