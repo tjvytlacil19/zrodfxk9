@@ -33,6 +33,11 @@ const PROGRAMS = [
     description:
       'A structured rehabilitation program focused on trust-building, confidence exercises, and socialization to help your dog feel secure in their new environment.',
   },
+  {
+    name: 'Hybrid In-Person/Online Training',
+    description:
+      'Combines hands-on ranch sessions with guided virtual coaching, giving you expert direction and steady progress from anywhere.',
+  },
 ]
 
 export function ProgramsGrid() {
@@ -54,8 +59,8 @@ export function ProgramsGrid() {
                   className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-border transition-colors duration-300 group-hover:ring-primary/50"
                 />
                 {/* Hexagon badge */}
-                <span className="absolute left-5 top-5 flex size-11 items-center justify-center bg-background/80 backdrop-blur-sm hex-clip-flat">
-                  <HexMark className="size-6 text-primary" />
+                <span className="absolute left-4 top-4 flex size-8 items-center justify-center bg-background/80 backdrop-blur-sm hex-clip-flat">
+                  <HexMark className="size-4 text-primary" />
                 </span>
               </div>
 
