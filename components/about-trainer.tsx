@@ -18,7 +18,7 @@ export function AboutTrainer() {
         <div className="relative mx-auto w-full max-w-md">
           <ImagePlaceholder
             label="TJ Vytlacil portrait"
-            className="hex-clip relative aspect-square w-full"
+            className="hex-clip-flat relative aspect-square w-full"
           />
         </div>
 
