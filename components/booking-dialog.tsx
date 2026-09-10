@@ -184,7 +184,7 @@ function BookingDialog({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
                     href="sms:+17195550199"
                     className="flex items-center justify-center gap-2.5 rounded-xl border border-primary/50 py-3.5 font-heading text-sm font-semibold uppercase tracking-widest text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
                   >
-                    Text TJ Now
+                    Call or Text
                   </a>
                 </div>
               </div>
