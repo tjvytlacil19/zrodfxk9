@@ -70,26 +70,26 @@ export function Contact() {
               >
                 <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="name" className="font-heading text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                    <label htmlFor="name" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
                       Full Name
                     </label>
                     <input suppressHydrationWarning id="name" name="name" type="text" required placeholder="Jane Doe" className={inputClass} />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="phone" className="font-heading text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                    <label htmlFor="phone" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
                       Phone
                     </label>
                     <input suppressHydrationWarning id="phone" name="phone" type="tel" placeholder="(719) 555-0000" className={inputClass} />
                   </div>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="email" className="font-heading text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                  <label htmlFor="email" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
                     Email
                   </label>
                   <input suppressHydrationWarning id="email" name="email" type="email" required placeholder="you@email.com" className={inputClass} />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="message" className="font-heading text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                  <label htmlFor="message" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
                     Tell Us About Your Dog
                   </label>
                   <textarea suppressHydrationWarning id="message" name="message" rows={4} placeholder="Breed, age, and the behavior you want to address…" className={inputClass} />
