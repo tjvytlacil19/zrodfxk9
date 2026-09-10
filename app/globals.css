@@ -161,6 +161,12 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* Faint depth gradients so the dark canvas doesn't read as flat black */
+    background-image:
+      radial-gradient(60rem 40rem at 50% -10%, oklch(1 0 0 / 5%), transparent 70%),
+      radial-gradient(50rem 50rem at 100% 20%, oklch(0.83 0.2 140 / 4%), transparent 65%),
+      radial-gradient(45rem 45rem at 0% 80%, oklch(0.83 0.2 140 / 3%), transparent 60%);
+    background-attachment: fixed;
   }
 }
 
@@ -179,10 +185,14 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100' viewBox='0 0 56 100'%3E%3Cg fill='none' stroke='%238CDA3F' stroke-opacity='0.08' stroke-width='1'%3E%3Cpath d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100'/%3E%3Cpath d='M28 0L28 34L0 50L0 84L28 100L56 84L56 50L28 34'/%3E%3C/g%3E%3C/svg%3E");
     background-size: 56px 100px;
   }
-  /* Subtle page-wide honeycomb wash — large scale, very low contrast */
+  /* Subtle page-wide honeycomb wash — large scale, very low contrast.
+     A radial mask fades the pattern toward the edges so it reads as depth,
+     not a uniform tile. */
   .honeycomb-page {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='112' height='200' viewBox='0 0 56 100'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.5' stroke-width='0.6'%3E%3Cpath d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100'/%3E%3Cpath d='M28 0L28 34L0 50L0 84L28 100L56 84L56 50L28 34'/%3E%3C/g%3E%3C/svg%3E");
     background-size: 112px 200px;
-    opacity: 0.04;
+    opacity: 0.05;
+    -webkit-mask-image: radial-gradient(120% 90% at 50% 0%, black, transparent 75%);
+    mask-image: radial-gradient(120% 90% at 50% 0%, black, transparent 75%);
   }
 }
