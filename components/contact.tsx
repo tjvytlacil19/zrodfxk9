@@ -45,7 +45,7 @@ export function Contact() {
             </ul>
           </div>
 
-          <div className="border border-border bg-card p-6 sm:p-8">
+          <div className="rounded-2xl border border-border bg-card p-6 sm:p-8">
             {submitted ? (
               <div className="flex h-full flex-col items-center justify-center gap-4 py-16 text-center">
                 <span className="flex size-14 items-center justify-center bg-primary text-primary-foreground">

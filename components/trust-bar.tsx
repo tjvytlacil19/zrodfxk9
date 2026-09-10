@@ -25,7 +25,7 @@ const ITEMS = [
 
 export function TrustBar() {
   return (
-    <section className="border-y border-border bg-card">
+    <section className="border-y border-border honeycomb-surface">
       <div className="mx-auto grid max-w-7xl grid-cols-1 divide-y divide-border sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-4 [&>*]:border-border sm:[&>*:nth-child(odd)]:border-r sm:[&>*:nth-child(-n+2)]:border-b lg:[&>*]:border-b-0 lg:[&>*]:border-r lg:[&>*:last-child]:border-r-0">
         {ITEMS.map((item) => (
           <div key={item.title} className="flex items-center gap-4 px-4 py-8 sm:px-6 lg:px-8">

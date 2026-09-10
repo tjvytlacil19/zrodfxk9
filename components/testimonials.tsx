@@ -24,7 +24,7 @@ const QUOTES = [
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="scroll-mt-16 bg-card py-32 lg:py-48">
+    <section id="testimonials" className="scroll-mt-16 honeycomb-surface py-32 lg:py-48">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading index="03" eyebrow="Client Results" title="Proof" />
 

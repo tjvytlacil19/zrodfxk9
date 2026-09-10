@@ -14,11 +14,6 @@ import { BookingProvider } from '@/components/booking-dialog'
 export default function Page() {
   return (
     <BookingProvider>
-      {/* Subtle page-wide honeycomb wash behind all content */}
-      <div
-        aria-hidden="true"
-        className="honeycomb-page pointer-events-none fixed inset-0 -z-10"
-      />
       <SiteHeader />
       <main>
         <Hero />

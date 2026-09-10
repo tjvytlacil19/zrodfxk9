@@ -161,11 +161,17 @@
   }
   body {
     @apply bg-background text-foreground;
-    /* Faint depth gradients so the dark canvas doesn't read as flat black */
+    /* Inheritable honeycomb tile — reused by opaque bands via .honeycomb-surface */
+    --hex-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='208' viewBox='0 0 56 100'%3E%3Cg fill='none' stroke='%238CDA3F' stroke-opacity='0.12' stroke-width='1'%3E%3Cpath d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100'/%3E%3Cpath d='M28 0L28 34L0 50L0 84L28 100L56 84L56 50L28 34'/%3E%3C/g%3E%3C/svg%3E");
+    /* Honeycomb tile + faint depth gradients so the dark canvas isn't flat black */
     background-image:
-      radial-gradient(60rem 40rem at 50% -10%, oklch(1 0 0 / 5%), transparent 70%),
-      radial-gradient(50rem 50rem at 100% 20%, oklch(0.83 0.2 140 / 4%), transparent 65%),
-      radial-gradient(45rem 45rem at 0% 80%, oklch(0.83 0.2 140 / 3%), transparent 60%);
+      var(--hex-pattern),
+      radial-gradient(60rem 40rem at 50% -10%, oklch(1 0 0 / 6%), transparent 70%),
+      radial-gradient(55rem 55rem at 100% 15%, oklch(0.83 0.2 140 / 6%), transparent 65%),
+      radial-gradient(50rem 50rem at 0% 85%, oklch(0.83 0.2 140 / 5%), transparent 60%);
+    background-size: 120px 208px, auto, auto, auto;
+    background-repeat: repeat, no-repeat, no-repeat, no-repeat;
+    background-position: 0 0, center, center, center;
     background-attachment: fixed;
   }
 }
@@ -185,14 +191,12 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100' viewBox='0 0 56 100'%3E%3Cg fill='none' stroke='%238CDA3F' stroke-opacity='0.08' stroke-width='1'%3E%3Cpath d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100'/%3E%3Cpath d='M28 0L28 34L0 50L0 84L28 100L56 84L56 50L28 34'/%3E%3C/g%3E%3C/svg%3E");
     background-size: 56px 100px;
   }
-  /* Subtle page-wide honeycomb wash — large scale, very low contrast.
-     A radial mask fades the pattern toward the edges so it reads as depth,
-     not a uniform tile. */
-  .honeycomb-page {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='208' viewBox='0 0 56 100'%3E%3Cg fill='none' stroke='%238CDA3F' stroke-opacity='0.9' stroke-width='0.9'%3E%3Cpath d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100'/%3E%3Cpath d='M28 0L28 34L0 50L0 84L28 100L56 84L56 50L28 34'/%3E%3C/g%3E%3C/svg%3E");
+  /* Opaque full-width bands: card tone with the honeycomb tile layered on top
+     so the pattern reads consistently with the transparent sections. */
+  .honeycomb-surface {
+    background-color: var(--card);
+    background-image: var(--hex-pattern);
     background-size: 120px 208px;
-    opacity: 0.14;
-    -webkit-mask-image: radial-gradient(140% 120% at 50% 0%, black, transparent 92%);
-    mask-image: radial-gradient(140% 120% at 50% 0%, black, transparent 92%);
+    background-position: 0 0;
   }
 }
