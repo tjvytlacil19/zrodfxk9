@@ -1,50 +1,38 @@
-'use client'
+import { Award, ShieldCheck, MapPin } from 'lucide-react'
 
-import { Clock, Phone, MessageSquare } from 'lucide-react'
-import { useBooking } from '@/components/booking-dialog'
-
-const PHONE = '(719) 555-0199'
-const TEL = 'tel:+17195550199'
-const SMS = 'sms:+17195550199'
+const ITEMS = [
+  {
+    icon: Award,
+    title: '20+ Years Experience',
+    detail: 'Two decades shaping working-dog behavior.',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Aggression Specialists',
+    detail: 'Proven protocols for the hardest cases.',
+  },
+  {
+    icon: MapPin,
+    title: '15-Acre Ranch',
+    detail: 'Purpose-built grounds in Colorado Springs.',
+  },
+]
 
 export function TrustBar() {
-  const { open } = useBooking()
-
-  const itemClass =
-    'group flex w-full items-center gap-4 px-4 py-8 text-left transition-colors hover:bg-secondary sm:px-6 lg:px-8'
-
   return (
     <section className="border-y border-border bg-card">
       <div className="mx-auto grid max-w-7xl grid-cols-1 divide-y divide-border sm:grid-cols-3 sm:divide-x sm:divide-y-0">
-        <button type="button" onClick={open} className={itemClass}>
-          <Clock className="size-8 shrink-0 text-primary" strokeWidth={1.5} />
-          <div>
-            <p className="font-heading text-lg font-bold uppercase tracking-wide text-foreground">
-              Submit A Form
-            </p>
-            <p className="text-sm text-muted-foreground">Response in under 24 hours</p>
+        {ITEMS.map((item) => (
+          <div key={item.title} className="flex items-center gap-4 px-4 py-8 sm:px-6 lg:px-8">
+            <item.icon className="size-8 shrink-0 text-primary" strokeWidth={1.5} />
+            <div>
+              <p className="font-heading text-lg font-bold uppercase tracking-wide text-foreground">
+                {item.title}
+              </p>
+              <p className="text-sm text-muted-foreground">{item.detail}</p>
+            </div>
           </div>
-        </button>
-
-        <a href={TEL} className={itemClass}>
-          <Phone className="size-8 shrink-0 text-primary" strokeWidth={1.5} />
-          <div>
-            <p className="font-heading text-lg font-bold uppercase tracking-wide text-foreground">
-              Call TJ Now
-            </p>
-            <p className="text-sm text-muted-foreground">{PHONE}</p>
-          </div>
-        </a>
-
-        <a href={SMS} className={itemClass}>
-          <MessageSquare className="size-8 shrink-0 text-primary" strokeWidth={1.5} />
-          <div>
-            <p className="font-heading text-lg font-bold uppercase tracking-wide text-foreground">
-              Text TJ Now
-            </p>
-            <p className="text-sm text-muted-foreground">{PHONE}</p>
-          </div>
-        </a>
+        ))}
       </div>
     </section>
   )
