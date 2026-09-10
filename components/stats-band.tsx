@@ -5,8 +5,8 @@ import { cn } from '@/lib/utils'
 
 const STATS = [
   { value: 20, suffix: '+', label: 'Years Behind the Leash' },
-  { value: 2400, suffix: '+', label: 'Dogs Rehabilitated' },
-  { value: 94, suffix: '%', label: 'Off-Leash Reliability' },
+  { value: 100, suffix: '%', label: 'Follow Through' },
+  { value: 100, suffix: '%', label: 'Communication' },
   { value: 15, suffix: '', label: 'Acre Working Ranch' },
 ]
 
