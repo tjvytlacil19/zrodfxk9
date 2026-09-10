@@ -12,7 +12,6 @@ import {
 } from 'react'
 import { X, Phone, Check } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { cn } from '@/lib/utils'
 
 type BookingContextValue = {
   open: () => void
@@ -42,7 +41,6 @@ export function BookingProvider({ children }: { children: ReactNode }) {
 
 function BookingDialog({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const [submitted, setSubmitted] = useState(false)
-  const [phoneCall, setPhoneCall] = useState(false)
   const titleId = useId()
   const panelRef = useRef<HTMLDivElement>(null)
 
@@ -66,7 +64,6 @@ function BookingDialog({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
     if (isOpen) return
     const t = setTimeout(() => {
       setSubmitted(false)
-      setPhoneCall(false)
     }, 250)
     return () => clearTimeout(t)
   }, [isOpen])
@@ -118,8 +115,8 @@ function BookingDialog({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
               Request Received
             </h2>
             <p className="max-w-sm text-pretty text-sm leading-relaxed text-muted-foreground">
-              Thanks — we&apos;ll be in touch shortly to schedule your evaluation
-              {phoneCall ? ' with a phone call' : ''}.
+              Thanks — we&apos;ll be in touch in less than 24 hours to schedule your
+              evaluation.
             </p>
             <Button
               onClick={onClose}
@@ -151,7 +148,7 @@ function BookingDialog({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
             >
               <div className="flex flex-col gap-2">
                 <label htmlFor="booking-name" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
-                  Name
+                  Your Name
                 </label>
                 <input suppressHydrationWarning id="booking-name" name="name" type="text" required placeholder="Jane Doe" className={inputClass} />
               </div>
@@ -163,47 +160,33 @@ function BookingDialog({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
                 <input suppressHydrationWarning id="booking-email" name="email" type="email" required placeholder="you@email.com" className={inputClass} />
               </div>
 
-              {/* Phone call toggle */}
-              <div className="flex items-center justify-between gap-4 rounded-xl border border-border bg-background/60 px-4 py-3.5">
-                <span className="flex items-center gap-2.5">
-                  <Phone className="size-4 text-primary" />
-                  <span className="text-sm text-foreground">Request a phone call</span>
-                </span>
-                <button
-                  type="button"
-                  role="switch"
-                  aria-checked={phoneCall}
-                  aria-label="Request a phone call"
-                  onClick={() => setPhoneCall((v) => !v)}
-                  className={cn(
-                    'relative inline-flex h-6 w-11 shrink-0 items-center rounded-full transition-colors outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-card',
-                    phoneCall ? 'bg-primary' : 'bg-secondary',
-                  )}
-                >
-                  <span
-                    className={cn(
-                      'inline-block size-5 transform rounded-full bg-background shadow transition-transform',
-                      phoneCall ? 'translate-x-[22px]' : 'translate-x-0.5',
-                    )}
-                  />
-                </button>
+              <div className="flex flex-col gap-2">
+                <label htmlFor="booking-dog" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
+                  Dog&apos;s Name
+                </label>
+                <input suppressHydrationWarning id="booking-dog" name="dogName" type="text" required placeholder="Ranger" className={inputClass} />
               </div>
 
-              {/* Phone number field reveals when the toggle is on */}
-              {phoneCall && (
+              <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="booking-phone" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
-                    Phone
+                  <label htmlFor="booking-breed" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
+                    Breed
                   </label>
-                  <input suppressHydrationWarning id="booking-phone" name="phone" type="tel" required placeholder="(719) 555-0000" className={inputClass} />
+                  <input suppressHydrationWarning id="booking-breed" name="breed" type="text" required placeholder="German Shepherd" className={inputClass} />
                 </div>
-              )}
+                <div className="flex flex-col gap-2">
+                  <label htmlFor="booking-age" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
+                    Age
+                  </label>
+                  <input suppressHydrationWarning id="booking-age" name="age" type="text" required placeholder="2 yrs" className={inputClass} />
+                </div>
+              </div>
 
               <div className="flex flex-col gap-2">
                 <label htmlFor="booking-message" className="font-mono text-xs uppercase tracking-widest text-muted-foreground">
                   About your dog
                 </label>
-                <textarea suppressHydrationWarning id="booking-message" name="message" rows={3} placeholder="Breed, age, and the behavior you want to address…" className={inputClass} />
+                <textarea suppressHydrationWarning id="booking-message" name="message" rows={3} placeholder="The behavior you want to address…" className={inputClass} />
               </div>
 
               <Button
@@ -212,6 +195,22 @@ function BookingDialog({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
               >
                 Submit Request
               </Button>
+
+              {/* Prefer to talk? Call TJ directly */}
+              <div className="flex items-center gap-4 pt-1">
+                <span aria-hidden="true" className="h-px flex-1 bg-border" />
+                <span className="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-muted-foreground">
+                  or
+                </span>
+                <span aria-hidden="true" className="h-px flex-1 bg-border" />
+              </div>
+              <a
+                href="tel:+17195550199"
+                className="group flex items-center justify-center gap-2.5 rounded-xl border border-primary/50 py-3.5 font-heading text-sm font-semibold uppercase tracking-widest text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+              >
+                <Phone className="size-4" />
+                Call TJ Now — (719) 555-0199
+              </a>
             </form>
           </div>
         )}
