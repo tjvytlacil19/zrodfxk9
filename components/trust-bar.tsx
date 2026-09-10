@@ -1,4 +1,4 @@
-import { Award, ShieldCheck, MapPin } from 'lucide-react'
+import { Award, ShieldCheck, HeartPulse, MapPin } from 'lucide-react'
 
 const ITEMS = [
   {
@@ -12,6 +12,11 @@ const ITEMS = [
     detail: 'Proven protocols for the hardest cases.',
   },
   {
+    icon: HeartPulse,
+    title: 'Anxiety/Reactivity Specialists',
+    detail: 'Calming reactive, fearful, and anxious dogs.',
+  },
+  {
     icon: MapPin,
     title: '15-Acre Ranch',
     detail: 'Purpose-built grounds in Colorado Springs.',
@@ -21,7 +26,7 @@ const ITEMS = [
 export function TrustBar() {
   return (
     <section className="border-y border-border bg-card">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 divide-y divide-border sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 divide-y divide-border sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-4 [&>*]:border-border sm:[&>*:nth-child(odd)]:border-r sm:[&>*:nth-child(-n+2)]:border-b lg:[&>*]:border-b-0 lg:[&>*]:border-r lg:[&>*:last-child]:border-r-0">
         {ITEMS.map((item) => (
           <div key={item.title} className="flex items-center gap-4 px-4 py-8 sm:px-6 lg:px-8">
             <item.icon className="size-8 shrink-0 text-primary" strokeWidth={1.5} />
