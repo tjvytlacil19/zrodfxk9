@@ -54,7 +54,7 @@ export function Faq() {
                     aria-expanded={isOpen}
                     className="flex w-full items-center justify-between gap-6 py-6 text-left"
                   >
-                    <span className="font-heading text-lg font-semibold uppercase tracking-tight text-foreground sm:text-xl">
+                    <span className="font-heading text-lg font-semibold uppercase tracking-tight text-primary sm:text-xl">
                       {item.q}
                     </span>
                     <Plus
@@ -71,7 +71,7 @@ export function Faq() {
                     )}
                   >
                     <div className="overflow-hidden">
-                      <p className="max-w-xl text-pretty leading-relaxed text-muted-foreground">
+                      <p className="max-w-xl text-pretty font-semibold leading-relaxed text-foreground">
                         {item.a}
                       </p>
                     </div>
