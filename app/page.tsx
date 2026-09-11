@@ -6,6 +6,7 @@ import { AboutTrainer } from '@/components/about-trainer'
 import { StatsBand } from '@/components/stats-band'
 import { Testimonials } from '@/components/testimonials'
 import { Facility } from '@/components/facility'
+import { Faq } from '@/components/faq'
 import { Contact } from '@/components/contact'
 import { SiteFooter } from '@/components/site-footer'
 import { StickyContact } from '@/components/sticky-contact'
@@ -23,6 +24,7 @@ export default function Page() {
         <StatsBand />
         <Testimonials />
         <Facility />
+        <Faq />
         <Contact />
       </main>
       <SiteFooter />
