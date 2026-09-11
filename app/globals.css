@@ -162,7 +162,7 @@
   body {
     @apply bg-background text-foreground;
     /* Subtle flat-top honeycomb lattice with sparse node dots as a fixed backdrop */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='48.5' viewBox='0 0 84 48.5'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.1' stroke-width='0.5'%3E%3Cpath d='M28 24.25L14 48.5L-14 48.5L-28 24.25L-14 0L14 0Z'/%3E%3Cpath d='M112 24.25L98 48.5L70 48.5L56 24.25L70 0L98 0Z'/%3E%3Cpath d='M70 0L56 24.25L28 24.25L14 0L28 -24.25L56 -24.25Z'/%3E%3Cpath d='M70 48.5L56 72.75L28 72.75L14 48.5L28 24.25L56 24.25Z'/%3E%3C/g%3E%3Cg fill='%23ffffff' fill-opacity='0.14'%3E%3Ccircle cx='28' cy='24.25' r='1.5'/%3E%3Ccircle cx='56' cy='24.25' r='1.5'/%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='48.5' viewBox='0 0 84 48.5'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.06' stroke-width='0.5'%3E%3Cpath d='M28 24.25L14 48.5L-14 48.5L-28 24.25L-14 0L14 0Z'/%3E%3Cpath d='M112 24.25L98 48.5L70 48.5L56 24.25L70 0L98 0Z'/%3E%3Cpath d='M70 0L56 24.25L28 24.25L14 0L28 -24.25L56 -24.25Z'/%3E%3Cpath d='M70 48.5L56 72.75L28 72.75L14 48.5L28 24.25L56 24.25Z'/%3E%3C/g%3E%3Cg fill='%23ffffff' fill-opacity='0.09'%3E%3Ccircle cx='28' cy='24.25' r='1.5'/%3E%3Ccircle cx='56' cy='24.25' r='1.5'/%3E%3C/g%3E%3C/svg%3E");
     background-size: 150px 86.6px;
     background-position: center;
     background-repeat: repeat;
