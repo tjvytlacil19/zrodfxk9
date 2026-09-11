@@ -1,5 +1,6 @@
 import { SiteHeader } from '@/components/site-header'
 import { Hero } from '@/components/hero'
+import { CtaBand } from '@/components/cta-band'
 import { TrustBar } from '@/components/trust-bar'
 import { ProgramsGrid } from '@/components/programs-grid'
 import { AboutTrainer } from '@/components/about-trainer'
@@ -18,6 +19,7 @@ export default function Page() {
       <SiteHeader />
       <main>
         <Hero />
+        <CtaBand />
         <TrustBar />
         <ProgramsGrid />
         <AboutTrainer />
