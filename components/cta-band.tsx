@@ -1,11 +1,7 @@
-'use client'
-
 import { ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { useBooking } from '@/components/booking-dialog'
 
 export function CtaBand() {
-  const { open } = useBooking()
   return (
     <section className="w-full bg-primary text-primary-foreground">
       <div className="mx-auto flex max-w-7xl flex-col items-start gap-8 px-4 py-14 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8 lg:py-16">
@@ -19,7 +15,7 @@ export function CtaBand() {
           </p>
         </div>
         <Button
-          onClick={open}
+          type="button"
           size="lg"
           variant="secondary"
           className="group h-14 shrink-0 rounded-xl bg-background px-8 font-heading text-sm font-semibold uppercase tracking-widest text-foreground hover:bg-background/90"
